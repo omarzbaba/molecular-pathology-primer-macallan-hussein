@@ -1,0 +1,70 @@
+Copyright (c) 2026 Omar Z. Baba, MD. All rights reserved.
+
+MOLECULAR PATHOLOGY - A PRIMER FOR THE PATHOLOGY ROTATION
+An interactive teaching primer for medical students.
+
+--------------------------------------------------------------------------
+1. ORIGINAL WORK
+--------------------------------------------------------------------------
+
+All original material in this repository is the exclusive property of the
+copyright holder. This includes, without limitation:
+
+  - the curriculum design, learning objectives and information architecture;
+  - all written teaching content, callouts, pearls and explanatory prose;
+  - the question bank, answer explanations and teaching pearls;
+  - the clinical cases and their progressive-disclosure reasoning;
+  - the glossary, biomarker atlas and reference tables;
+  - the interactive laboratories and simulations, and their illustrations;
+  - the design system (colour tokens, typography, layout and components);
+  - the HTML, CSS and JavaScript source code;
+  - the selection, coordination and arrangement of all of the above,
+    which constitutes a protected compilation.
+
+No part of the original work may be reproduced, distributed, publicly
+displayed, performed, adapted, translated, or used to create derivative
+works, in whole or in part, by any means, without the prior written
+permission of the copyright holder.
+
+Viewing the published site in a web browser for personal or educational
+reading is permitted. That permission does not extend to copying,
+re-hosting, redistributing or adapting the work.
+
+--------------------------------------------------------------------------
+2. THIRD-PARTY MATERIAL
+--------------------------------------------------------------------------
+
+The three-dimensional model on the opening screen is drawn with three.js,
+loaded at run time from a public content delivery network under its own
+MIT licence; it is not redistributed in this repository.
+
+The videos are embedded from their publishers' own channels (Cold Spring
+Harbor Laboratory DNA Learning Center, Illumina, and Emory University
+CancerQuest) and remain the property of those publishers. They are not
+copied or hosted here.
+
+The learning objectives are mapped to the published content specifications
+of the American Board of Pathology, which remain the property of the Board.
+They are referenced, not reproduced. This work is not affiliated with or
+endorsed by the American Board of Pathology.
+
+--------------------------------------------------------------------------
+3. NO WARRANTY / NOT MEDICAL ADVICE
+--------------------------------------------------------------------------
+
+This primer is an educational teaching aid. It is not a clinical protocol,
+not a substitute for institutional policy, current guidelines, a
+laboratory's own validated procedures or professional clinical judgement,
+and it does not constitute medical advice. Drug names are given as examples
+only. Clinical decisions must be confirmed against current guidance before
+being applied to any patient.
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY
+ARISING FROM, OUT OF, OR IN CONNECTION WITH THE WORK OR ITS USE.
+
+--------------------------------------------------------------------------
+
+For permissions and licensing enquiries, contact the copyright holder.

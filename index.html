@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Molecular pathology primer for medical students on the pathology rotation: a guided 90-minute session with interactive labs. Built for Macallan and Hussein.">
+<meta property="og:title" content="Molecular Pathology · A Primer">
+<meta property="og:description" content="A guided 90-minute primer for the pathology rotation, with interactive labs.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5.5' fill='%231d1d1f'/%3E%3Cpath d='M9 5c0 4 6 4 6 7s-6 3-6 7M15 5c0 4-6 4-6 7s6 3 6 7M10.2 7.6h3.6M10.2 16.4h3.6' fill='none' stroke='%23fff' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="author" content="Omar Z. Baba, MD">
+<meta name="copyright" content="Copyright (c) 2026 Omar Z. Baba, MD. All rights reserved.">
+<title>Molecular Pathology · A Primer</title>
+<script>(function(){try{var t=localStorage.getItem('mpp.theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t;}catch(e){document.documentElement.dataset.theme='light';}})();</script>
+<link rel="stylesheet" href="css/base.css?v=2026.11.17">
+<link rel="stylesheet" href="css/components.css?v=2026.11.17">
+<link rel="stylesheet" href="css/labs.css?v=2026.11.17">
+<!-- three.js draws the 3D helix only. The version is pinned and each file is checked against its hash before it runs. -->
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js"},"integrity":{"https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js":"sha384-m8JoFX52V6NGv2usipnlLJKnJfL7IE8dbniPDDCSGSQv3Hm4n6PjfV6syVwfuoRc","https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.core.js":"sha384-mdKeCwPEcbDvzaxwhm+MVuLoMou+E7jQqrs4tmu/n8HBYPGI1kZt0MkJxlMR4zFM"}}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress-line" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<div class="app">
+  <aside class="sidebar" id="sidebar" aria-label="Primary">
+    <a class="brand" href="#start">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9s8 4 8 9M9.5 6.5h5M9.5 17.5h5M8.6 12h6.8"/></svg>
+      </span>
+      <span class="brand-text"><strong>Molecular Pathology</strong><span>A primer for the rotation</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Sections">
+      <p class="nav-group">Session · about 90 min</p>
+      <a class="nav-item is-active" href="#start" data-nav="start"><span class="nav-n">00</span>Start here</a>
+      <a class="nav-item" href="#s1" data-nav="s1"><span class="nav-n">01</span>Read the language<i class="nav-tick" data-tick="s1"></i></a>
+      <a class="nav-item" href="#s2" data-nav="s2"><span class="nav-n">02</span>Protect the specimen<i class="nav-tick" data-tick="s2"></i></a>
+      <a class="nav-item" href="#s3" data-nav="s3"><span class="nav-n">03</span>Amplify<i class="nav-tick" data-tick="s3"></i></a>
+      <a class="nav-item" href="#s4" data-nav="s4"><span class="nav-n">04</span>Sequence<i class="nav-tick" data-tick="s4"></i></a>
+      <a class="nav-item" href="#s5" data-nav="s5"><span class="nav-n">05</span>Chromosomes<i class="nav-tick" data-tick="s5"></i></a>
+      <a class="nav-item" href="#s6" data-nav="s6"><span class="nav-n">06</span>Interpret<i class="nav-tick" data-tick="s6"></i></a>
+      <a class="nav-item" href="#s7" data-nav="s7"><span class="nav-n">07</span>In cancer<i class="nav-tick" data-tick="s7"></i></a>
+      <a class="nav-item" href="#s8" data-nav="s8"><span class="nav-n">08</span>Beyond cancer<i class="nav-tick" data-tick="s8"></i></a>
+      <a class="nav-item" href="#wrap" data-nav="wrap"><span class="nav-n">09</span>Wrap-up</a>
+      <p class="nav-group">On your own</p>
+      <a class="nav-item" href="#cases" data-nav="cases"><span class="nav-n">A</span>Case lab</a>
+      <a class="nav-item" href="#bank" data-nav="bank"><span class="nav-n">B</span>Question bank</a>
+      <a class="nav-item" href="#atlas" data-nav="atlas"><span class="nav-n">C</span>Biomarker atlas</a>
+      <a class="nav-item" href="#reference" data-nav="reference"><span class="nav-n">D</span>Reference tables</a>
+      <a class="nav-item" href="#glossary" data-nav="glossary"><span class="nav-n">E</span>Glossary</a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <p class="who-label">Studying as</p>
+      <div class="who" id="who" role="group" aria-label="Choose who is studying"></div>
+    </div>
+  </aside>
+
+  <div class="content">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <div class="crumb"><span>Now viewing</span><strong id="crumb">Start here</strong></div>
+      <div class="topbar-right">
+        <button class="timer" id="timer" title="Session clock: click to start or pause. To reset: double-click, press and hold, or press Delete."><i></i><b id="timerText">0:00</b><span id="timerPlan">of 90 min</span></button>
+        <button class="search-btn" id="searchBtn" aria-label="Search the primer">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <span>Search</span><kbd>⌘K</kbd>
+        </button>
+        <div class="pill" title="Questions answered by the selected learner">
+          <svg class="ring" viewBox="0 0 36 36" width="28" height="28" aria-hidden="true"><circle class="ring-bg" cx="18" cy="18" r="15.5"/><circle class="ring-fg" id="ring" cx="18" cy="18" r="15.5"/></svg>
+          <div class="pill-text"><strong id="progPct">0%</strong><span id="progLabel">0 of 0 answered</span></div>
+        </div>
+        <button class="icon-btn" id="themeBtn" aria-label="Switch between light and dark">
+          <svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- ================= START ================= -->
+      <section class="section" id="start" data-title="Start here" data-min="5">
+        <div class="hero">
+          <div class="reveal">
+            <span class="kicker">Pathology rotation · Molecular primer</span>
+            <h1>Molecular pathology, from tissue to targeted therapy.</h1>
+            <p class="hero-lede">Welcome, <strong>Macallan</strong> &amp; <strong>Hussein</strong>. In about ninety minutes you will be able to choose a molecular test, protect the specimen for it, and read the report that comes back.</p>
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="#s1">Begin the session</a>
+              <a class="btn btn--ghost" href="#plan">See the plan</a>
+            </div>
+            <dl class="hero-facts">
+              <div><dt>Stops</dt><dd>8</dd></div>
+              <div><dt>Minutes</dt><dd>≈ 90</dd></div>
+              <div><dt>Hands-on labs</dt><dd>10</dd></div>
+              <div><dt>Objectives</dt><dd>8</dd></div>
+            </dl>
+            <p class="byline">Created by <strong>Omar Z. Baba, MD</strong></p>
+          </div>
+
+          <div class="hero-stage reveal" id="helixStage">
+            <div class="helix-poster" aria-hidden="true">
+              <svg viewBox="0 0 120 260" fill="none" stroke-linecap="round">
+                <path d="M30 10c0 40 60 40 60 80s-60 40-60 80 60 40 60 80" stroke="#d9dde6" stroke-width="5"/>
+                <path d="M90 10c0 40-60 40-60 80s60 40 60 80-60 40-60 80" stroke="#8b93a5" stroke-width="5"/>
+                <g stroke-width="3.2"><path d="M39 30h42" stroke="#199e70"/><path d="M52 50h16" stroke="#3987e5"/><path d="M52 130h16" stroke="#d95926"/><path d="M39 110h42" stroke="#f5f5f7"/><path d="M39 150h42" stroke="#3987e5"/><path d="M39 230h42" stroke="#199e70"/><path d="M52 210h16" stroke="#d95926"/></g>
+              </svg>
+            </div>
+            <canvas id="helixCanvas" aria-label="Rotating three-dimensional model of the DNA double helix. Drag to turn it." role="img"></canvas>
+            <div class="helix-cap"><span>DNA double helix · <b>drag to turn</b></span><span>A·T two bonds · G·C three</span></div>
+            <div class="helix-hud">
+              <label class="ctl-label" for="helixTemp"><span>Temperature</span><b id="helixTempVal">37 °C</b></label>
+              <input class="range" id="helixTemp" type="range" min="37" max="95" step="1" value="37" aria-describedby="helixState">
+              <p class="helix-state" id="helixState"><strong>Paired.</strong> A pairs with T, G pairs with C. Hydrogen bonds hold the two strands together.</p>
+              <div class="helix-key" aria-hidden="true"><span><i style="background:#199e70"></i>A</span><span><i style="background:#d95926"></i>T</span><span><i style="background:#3987e5"></i>C</span><span><i style="background:#f5f5f7"></i>G</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="start-grid mt-lg" id="plan">
+          <div class="stack">
+            <div class="card reveal">
+              <span class="card-eyebrow">The one idea</span>
+              <h3>Complementary strands find each other.</h3>
+              <p>Heat separates the two strands of DNA; cooling lets each strand find its partner again. Nearly every test in this primer is an engineered version of that trick: offer the patient’s DNA a short known sequence — a <strong>primer</strong> or a <strong>probe</strong> — and see whether it finds a match. Slide the temperature on the model to watch it happen.</p>
+            </div>
+            <div class="card card--tint reveal">
+              <h4>What a molecular test can answer</h4>
+              <ul>
+                <li><strong>What is it?</strong> A fusion or mutation can define a disease.</li>
+                <li><strong>How will it behave?</strong> Prognosis.</li>
+                <li><strong>What will work?</strong> A biomarker that predicts response to a drug.</li>
+                <li><strong>How much is left?</strong> Monitoring after treatment.</li>
+                <li><strong>Who else is at risk?</strong> Inherited variants and the family.</li>
+              </ul>
+            </div>
+            <div class="card reveal">
+              <h4>How to use this page</h4>
+              <p>Work down the eight stops together. Each has one idea, one thing to try, a short list to carry away, and one question. The dashed <strong>Go deeper</strong> drawers and everything under <strong>On your own</strong> are optional — for later, if you are curious.</p>
+              <p style="margin-top:12px"><span class="lvl">Core</span> every student should own · <span class="lvl lvl--next">Next level</span> seen on service · <span class="lvl lvl--preview">Preview</span> fellow territory</p>
+            </div>
+          </div>
+          <div class="agenda reveal" id="agenda" aria-label="Session plan"></div>
+        </div>
+
+        <h3 class="sub reveal">Eight objectives</h3>
+        <p class="sub-lead reveal">Mapped from the American Board of Pathology’s molecular content specifications. Each ring fills as you answer that objective’s questions.</p>
+        <div class="obj-grid reveal" id="objGrid"></div>
+      </section>
+
+      <!-- ================= STOP 1 ================= -->
+      <section class="section" id="s1" data-title="Read the language" data-min="12">
+        <header class="sec-head reveal">
+          <div class="sec-num">01</div>
+          <div>
+            <span class="kicker">Stop 1 · about 12 min · Objective 1</span>
+            <h2>Read the language: genes, variants and their names.</h2>
+            <p class="lead">A gene is a recipe written in four letters. Molecular pathology looks for the misprints that matter, and gives each one a precise name.</p>
+          </div>
+        </header>
+
+        <div class="dogma reveal" role="img" aria-label="A gene made of exons and introns is transcribed and spliced into messenger RNA, which is translated three bases at a time into protein.">
+          <div class="dg-row"><span class="dg-name">DNA<small>the gene</small></span><div class="dg-track"><i class="dg-prom"></i><i class="dg-ex" style="flex:2.2">exon 1</i><i class="dg-in"></i><i class="dg-ex" style="flex:1.7">exon 2</i><i class="dg-in"></i><i class="dg-ex" style="flex:2.6">exon 3</i></div></div>
+          <p class="dg-step">transcription, then splicing removes the introns</p>
+          <div class="dg-row"><span class="dg-name">mRNA<small>the working copy</small></span><div class="dg-track dg-rna"><i class="dg-cap"></i><i class="dg-ex" style="flex:2.2">1</i><i class="dg-ex" style="flex:1.7">2</i><i class="dg-ex" style="flex:2.6">3</i><i class="dg-tail">AAAA</i></div></div>
+          <p class="dg-step">translation: three bases (one codon) per amino acid</p>
+          <div class="dg-row"><span class="dg-name">Protein<small>does the work</small></span><div class="dg-track dg-prot"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        </div>
+
+        <div class="reveal" id="lab-mutation" data-lab="mutation"></div>
+
+        <h3 class="sub reveal">Six ways a gene breaks</h3>
+        <p class="sub-lead reveal">Name the kind of alteration first. Each one needs a test that was built to see it — <strong>sequencing does not see everything</strong>.</p>
+        <div class="six reveal" id="sixGrid"></div>
+
+        <div class="grid-2 mt-lg reveal">
+          <div class="card">
+            <h4>Germline or somatic?</h4>
+            <p><strong>Germline</strong> variants are present in every cell from conception and can be passed on. Test blood or saliva. <strong>Somatic</strong> variants are acquired in one tissue — the tumor — and are not inherited. Test the tumor.</p>
+            <p>The same gene can be either: <i>BRCA1</i> altered in every cell is an inherited risk; altered only in the tumor it is a treatment clue.</p>
+          </div>
+          <div class="card">
+            <h4>Accelerator or brake?</h4>
+            <p><strong>Oncogenes</strong> are accelerators: one activating hit is enough (<i>KRAS</i>, <i>EGFR</i>, <i>BRAF</i>, <i>ERBB2</i>, most fusions). <strong>Tumor suppressors</strong> are brakes: both copies must fail (<i>TP53</i>, <i>RB1</i>, <i>APC</i>, <i>BRCA1/2</i>).</p>
+            <p>That is why inheriting one faulty brake predisposes to cancer — only one more hit is needed.</p>
+          </div>
+        </div>
+
+        <div class="know reveal" data-know="s1"></div>
+
+        <p class="check-title reveal">Checkpoint</p>
+        <div class="reveal" data-checkpoint="s1"></div>
+
+        <details class="deeper reveal">
+          <summary>Go deeper <small>on your own · genome numbers, naming rules, inheritance patterns</small></summary>
+          <div class="deeper-body">
+            <h3 class="sub">The genome in five numbers</h3>
+            <div class="stats">
+              <div class="stat"><b>3.2 billion</b><span>base pairs in one copy of the genome</span></div>
+              <div class="stat"><b>≈ 20,000</b><span>protein-coding genes</span></div>
+              <div class="stat"><b>1–2%</b><span>of the genome codes for protein (the exome)</span></div>
+              <div class="stat"><b>23 pairs</b><span>of chromosomes: 22 autosomes plus XX or XY</span></div>
+              <div class="stat"><b>16,569</b><span>bases in the mitochondrial genome — inherited from the mother</span></div>
+            </div>
+
+            <h3 class="sub">Naming rules <span class="lvl lvl--next">Next level</span></h3>
+            <div data-table="naming"></div>
+
+            <h3 class="sub">Patterns of inheritance <span class="lvl">Core</span></h3>
+            <div data-table="inherit"></div>
+            <p class="note"><span class="note-label">Words worth knowing</span><strong>Penetrance</strong>: the share of carriers who ever show the disease. <strong>Expressivity</strong>: how severe it is among those who do. <strong>Mosaicism</strong>: a variant present in only some of the body’s cells. <strong>De novo</strong>: new in the child, absent in both parents.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ================= STOP 2 ================= -->
+      <section class="section" id="s2" data-title="Protect the specimen" data-min="8">
+        <header class="sec-head reveal">
+          <div class="sec-num">02</div>
+          <div>
+            <span class="kicker">Stop 2 · about 8 min · Objective 2</span>
+            <h2>Protect the specimen: the test is only as good as the tissue.</h2>
+            <p class="lead">Most molecular failures happen before the specimen ever reaches the molecular laboratory. The pathologist’s contribution starts at the bench: the right tube, the right fixative, and enough tumor.</p>
+          </div>
+        </header>
+
+        <div class="grid-3 reveal">
+          <div class="card">
+            <span class="card-eyebrow">Tube</span>
+            <h4>EDTA for PCR. Heparin for karyotype.</h4>
+            <p><strong>Heparin inhibits PCR</strong>, so blood and marrow for PCR or sequencing go in <strong>EDTA (lavender top)</strong>. Karyotyping is the opposite: it needs <strong>living cells in sodium heparin (green top)</strong>, kept at room temperature and never frozen.</p>
+          </div>
+          <div class="card">
+            <span class="card-eyebrow">Fixative</span>
+            <h4>Neutral buffered formalin, 6 to 72 hours.</h4>
+            <p>Formalin crosslinks and fragments nucleic acid — still usable, and the standard. Heavy-metal and strongly acidic fixatives (B5, Zenker, Bouin) leave DNA that cannot be tested.</p>
+          </div>
+          <div class="card">
+            <span class="card-eyebrow">Decalcification</span>
+            <h4>Strong acid destroys DNA.</h4>
+            <p>For a bone lesion, hold back a piece that is not decalcified, ask for <strong>EDTA decalcification</strong>, or send the aspirate or clot section instead.</p>
+          </div>
+        </div>
+
+        <div class="reveal" id="lab-cellularity" data-lab="cellularity"></div>
+
+        <div class="know reveal" data-know="s2"></div>
+
+        <p class="check-title reveal">Checkpoint</p>
+        <div class="reveal" data-checkpoint="s2"></div>
+
+        <details class="deeper reveal">
+          <summary>Go deeper <small>on your own · specimen types, nucleic-acid quality</small></summary>
+          <div class="deeper-body">
+            <h3 class="sub">Specimen types at a glance</h3>
+            <div data-table="specimens"></div>
+            <p class="note"><span class="note-label">RNA is fragile</span>RNA-degrading enzymes are everywhere. Tests that start from RNA — fusion transcripts, expression — need prompt handling. DNA purity is judged by the ratio of absorbance at 260 and 280 nm: about <strong>1.8 for DNA</strong> and <strong>2.0 for RNA</strong>. <span class="lvl lvl--next">Next level</span></p>
+            <p class="note note--pearl"><span class="note-label">On the wards</span>When tumor is scattered among normal cells, the pathologist circles the densest area on the slide and the laboratory scrapes only that region (macrodissection). It is the cheapest way to raise the allele fraction.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ================= STOP 3 ================= -->
+      <section class="section" id="s3" data-title="Amplify" data-min="10">
+        <header class="sec-head reveal">
+          <div class="sec-num">03</div>
+          <div>
+            <span class="kicker">Stop 3 · about 10 min · Objective 3</span>
+            <h2>Amplify: PCR finds one sequence and copies it a billion times.</h2>
+            <p class="lead">The polymerase chain reaction is the workhorse. Two short primers bracket the target, a heat-stable polymerase copies what lies between them, and every cycle doubles the product.</p>
+          </div>
+        </header>
+
+        <div class="reveal" id="lab-pcr" data-lab="pcr"></div>
+
+        <div class="grid-2 mt-lg reveal">
+          <div class="card">
+            <h4>Starting from RNA: reverse transcription</h4>
+            <p>RNA viruses, fusion transcripts and gene expression are measured from RNA. <strong>Reverse transcriptase</strong> first copies RNA into complementary DNA, then PCR proceeds as usual: <strong>RT-PCR</strong>.</p>
+            <p class="note note--dnc"><span class="note-label">Do not confuse</span>RT-PCR means <strong>reverse-transcription</strong> PCR. <strong>Real-time</strong> PCR is the quantitative kind. Doing both is RT-qPCR.</p>
+          </div>
+          <div class="card">
+            <h4>Counting while copying: real-time PCR</h4>
+            <p>Fluorescence is read at every cycle. The cycle at which the signal crosses a fixed threshold is the <strong>cycle threshold, Ct</strong>. Start with more target and the threshold is reached sooner.</p>
+            <p>This is how a viral load, or the amount of <i>BCR::ABL1</i> transcript, becomes a number.</p>
+          </div>
+        </div>
+
+        <div class="reveal" id="lab-qpcr" data-lab="qpcr"></div>
+
+        <div class="know reveal" data-know="s3"></div>
+
+        <p class="check-title reveal">Checkpoint</p>
+        <div class="reveal" data-checkpoint="s3"></div>
+
+        <details class="deeper reveal">
+          <summary>Go deeper <small>on your own · the PCR family, contamination, a 90-second animation</small></summary>
+          <div class="deeper-body">
+            <h3 class="sub">The PCR family</h3>
+            <div data-table="pcrfamily"></div>
+            <p class="note note--pitfall"><span class="note-label">Pitfall · contamination</span>A billion copies from one run are a billion potential contaminants for the next. Laboratories work in one direction — reagent preparation, then specimen preparation, then amplification and detection — in separate rooms, and never carry amplified product backwards.</p>
+            <h3 class="sub">Watch</h3>
+            <div class="video-row" data-videos="pcr"></div>
+          </div>
+        </details>
+      </section>
+
+      <!-- ================= STOP 4 ================= -->
+      <section class="section" id="s4" data-title="Sequence" data-min="10">
+        <header class="sec-head reveal">
+          <div class="sec-num">04</div>
+          <div>
+            <span class="kicker">Stop 4 · about 10 min · Objective 4</span>
+            <h2>Sequence: reading the letters, in one gene or in thousands.</h2>
+            <p class="lead">Sequencing answers “what exactly is the change?”. Sanger sequencing reads one fragment with great accuracy. Next-generation sequencing reads millions of fragments at once — and counts them.</p>
+          </div>
+        </header>
+
+        <div class="grid-2 reveal">
+          <div class="card">
+            <span class="card-eyebrow">One target</span>
+            <h4>Sanger sequencing</h4>
+            <div class="kv"><span>Reads</span><span>one fragment, 500–800 bases</span></div>
+            <div class="kv"><span>Best for</span><span>a known single-gene question</span></div>
+            <div class="kv"><span>Sees a variant when</span><span>it is in ≥ 15–20% of the DNA</span></div>
+            <div class="kv"><span>Turnaround</span><span>days</span></div>
+          </div>
+          <div class="card">
+            <span class="card-eyebrow">Many targets</span>
+            <h4>Next-generation sequencing (NGS)</h4>
+            <div class="kv"><span>Reads</span><span>millions of short fragments in parallel</span></div>
+            <div class="kv"><span>Best for</span><span>panels of genes, the exome, the genome</span></div>
+            <div class="kv"><span>Sees a variant when</span><span>it is in about 2–5% of the DNA</span></div>
+            <div class="kv"><span>Turnaround</span><span>one to three weeks</span></div>
+          </div>
+        </div>
+
+        <ol class="flow flow--row mt reveal">
+          <li><strong>Library.</strong> Fragment the DNA; add adapters and a barcode for each patient.</li>
+          <li><strong>Enrich.</strong> Capture or amplify only the genes of interest.</li>
+          <li><strong>Sequence.</strong> Read millions of fragments at the same time.</li>
+          <li><strong>Analyze.</strong> Align reads to the reference genome; call and interpret variants.</li>
+        </ol>
+
+        <div class="reveal" id="lab-pileup" data-lab="pileup"></div>
+
+        <div class="know reveal" data-know="s4"></div>
+
+        <p class="check-title reveal">Checkpoint</p>
+        <div class="reveal" data-checkpoint="s4"></div>
+
+        <details class="deeper reveal">
+          <summary>Go deeper <small>on your own · panel, exome or genome; read a chromatogram; two animations</small></summary>
+          <div class="deeper-body">
+            <h3 class="sub">Panel, exome or genome? <span class="lvl lvl--next">Next level</span></h3>
+            <div data-table="scope"></div>
+            <p class="note"><span class="note-label">Preview</span><strong>Tumor mutational burden</strong> is the number of mutations per million bases sequenced; a high value can predict response to immunotherapy. <strong>Long-read sequencing</strong> reads thousands of bases at a time and can cross repeats and rearrangements that short reads cannot.</p>
+            <div id="lab-chroma" data-lab="chroma"></div>
+            <h3 class="sub">Watch</h3>
+            <div class="video-row" data-videos="sanger,sbs"></div>
+          </div>
+        </details>
+      </section>
+
+      <!-- ================= STOP 5 ================= -->
+      <section class="section" id="s5" data-title="Chromosomes" data-min="10">
+        <header class="sec-head reveal">
+          <div class="sec-num">05</div>
+          <div>
+            <span class="kicker">Stop 5 · about 10 min · Objective 5</span>
+            <h2>See chromosomes, and choose the test that can see the lesion.</h2>
+            <p class="lead">Some alterations are too large for sequencing to notice and too small for a microscope. Three tools cover the range. The skill is matching the tool to the size and kind of change.</p>
+          </div>
+        </header>
+
+        <div class="grid-3 reveal">
+          <div class="card">
+            <span class="card-eyebrow">The whole genome, coarsely</span>
+            <h4>Karyotype</h4>
+            <p>Every chromosome at once, at a resolution of about 5–10 million bases. Needs <strong>dividing cells</strong>, so it takes days to weeks. Sees balanced translocations and gains or losses of whole chromosomes.</p>
+          </div>
+          <div class="card">
+            <span class="card-eyebrow">One question, fast</span>
+            <h4>FISH</h4>
+            <p>Fluorescence in situ hybridization: a labelled probe lights up one chosen locus. Works on non-dividing cells and paraffin sections in a day or two. <strong>It only sees what you ask about.</strong></p>
+          </div>
+          <div class="card">
+            <span class="card-eyebrow">Copy number, genome-wide</span>
+            <h4>Chromosomal microarray</h4>
+            <p>Gains and losses across the genome down to tens of thousands of bases. First-line for developmental delay and congenital anomalies. <strong>Blind to balanced rearrangements.</strong></p>
+          </div>
+        </div>
+
+        <div class="reveal" id="lab-whichtest" data-lab="whichtest"></div>
+
+        <h3 class="sub reveal">Reading FISH <span class="iftime">If time allows</span></h3>
+        <div class="reveal" id="lab-fish" data-lab="fish"></div>
+
+        <div class="know reveal" data-know="s5"></div>
+
+        <p class="check-title reveal">Checkpoint</p>
+        <div class="reveal" data-checkpoint="s5"></div>
+
+        <details class="deeper reveal">
+          <summary>Go deeper <small>on your own · karyotype shorthand, probe designs, an animation</small></summary>
+          <div class="deeper-body">
+            <h3 class="sub">Karyotype shorthand <span class="lvl lvl--next">Next level</span></h3>
+            <div data-table="karyo"></div>
+            <p class="note"><span class="note-label">Arms and bands</span><strong>p</strong> is the short arm (petit), <strong>q</strong> the long arm. Bands are numbered outward from the centromere, so 17p13 is near the tip of the short arm of chromosome 17.</p>
+            <h3 class="sub">Probe designs</h3>
+            <div data-table="probes"></div>
+            <h3 class="sub">Watch</h3>
+            <div class="video-row" data-videos="fish"></div>
+          </div>
+        </details>
+      </section>
+
+      <!-- ================= STOP 6 ================= -->
+      <section class="section" id="s6" data-title="Interpret" data-min="10">
+        <header class="sec-head reveal">
+          <div class="sec-num">06</div>
+          <div>
+            <span class="kicker">Stop 6 · about 10 min · Objective 6</span>
+            <h2>Interpret the report: a variant is data, the classification is the result.</h2>
+            <p class="lead">Finding a variant is the easy part. Deciding what it means — and stating plainly what the test could not see — is what the molecular pathologist actually delivers.</p>
+          </div>
+        </header>
+
+        <div class="reveal" id="lab-report" data-lab="report"></div>
+
+        <div class="grid-2 mt-lg reveal">
+          <div class="card">
+            <span class="card-eyebrow">Inherited (germline) variants</span>
+            <h4>Five tiers</h4>
+            <div class="tiers"><span class="is-act">Pathogenic</span><span class="is-act">Likely pathogenic</span><span class="is-vus">Uncertain significance</span><span>Likely benign</span><span>Benign</span></div>
+            <p>Act on <strong>pathogenic</strong> and <strong>likely pathogenic</strong>. The middle tier is the <strong>variant of uncertain significance, VUS</strong>.</p>
+          </div>
+          <div class="card">
+            <span class="card-eyebrow">Tumor (somatic) variants</span>
+            <h4>Four tiers</h4>
+            <div class="tiers"><span class="is-act">Tier I · strong</span><span class="is-act">Tier II · potential</span><span class="is-vus">Tier III · unknown</span><span>Tier IV · benign</span></div>
+            <p><strong>Tier I</strong> guides an approved therapy, a diagnosis or a prognosis in this tumor type. <strong>Tier III</strong> is the somatic equivalent of a VUS.</p>
+          </div>
+        </div>
+
+        <p class="note note--pitfall reveal"><span class="note-label">Pitfall · the VUS</span>A variant of uncertain significance is <strong>not a diagnosis</strong>. Do not change management on it, and do not test relatives to predict their risk with it. When a VUS is reclassified it is usually downgraded to benign — but most stay uncertain for years.</p>
+        <p class="note reveal"><span class="note-label">Why it matters · “negative” has edges</span>A negative result means nothing was found <strong>within the genes covered, among the kinds of alteration the test can detect, above its limit of detection</strong>. A sample with too little tumor can be falsely negative.</p>
+
+        <div class="know reveal" data-know="s6"></div>
+
+        <p class="check-title reveal">Checkpoint</p>
+        <div class="reveal" data-checkpoint="s6"></div>
+
+        <details class="deeper reveal">
+          <summary>Go deeper <small>on your own · how a variant is judged, liquid biopsy caveats</small></summary>
+          <div class="deeper-body">
+            <h3 class="sub">What counts as evidence <span class="lvl lvl--next">Next level</span></h3>
+            <div class="grid-2">
+              <div class="card"><h4>Is it common in healthy people?</h4><p>Population databases such as gnomAD. A variant seen frequently in the general population is very unlikely to cause a rare disease.</p></div>
+              <div class="card"><h4>Has it been seen in disease?</h4><p>ClinVar collects classifications of inherited variants; COSMIC catalogues variants found in tumors.</p></div>
+              <div class="card"><h4>What does it do to the protein?</h4><p>A stop or frameshift in a gene where loss of function causes disease carries weight. Computer predictions for missense changes are weak evidence on their own.</p></div>
+              <div class="card"><h4>Does it travel with the disease?</h4><p>Segregation in affected relatives, or a new (de novo) variant in an affected child of unaffected parents.</p></div>
+            </div>
+            <p class="note"><span class="note-label">Preview · liquid biopsy</span>Tumor DNA in plasma can be scarce, so a negative plasma result does not exclude a mutation — tissue remains the back-up. And ageing blood cells acquire their own mutations (<strong>clonal hematopoiesis</strong>), which a plasma test can mistake for tumor variants.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ================= STOP 7 ================= -->
+      <section class="section" id="s7" data-title="In cancer" data-min="10">
+        <header class="sec-head reveal">
+          <div class="sec-num">07</div>
+          <div>
+            <span class="kicker">Stop 7 · about 10 min · Objective 7</span>
+            <h2>Molecular in cancer: nine results that change what happens next.</h2>
+            <p class="lead">In oncology a molecular result does one of three things: it <strong>names</strong> the disease, <strong>predicts</strong> its behavior, or <strong>picks</strong> the drug. These nine are worth recognising on sight.</p>
+          </div>
+        </header>
+
+        <div class="table-wrap reveal">
+          <table class="tbl">
+            <thead><tr><th>Result</th><th>Where</th><th>What it changes</th></tr></thead>
+            <tbody>
+              <tr><td><i>ERBB2</i> (HER2) amplification</td><td>Breast, stomach</td><td>Anti-HER2 therapy such as trastuzumab. Immunohistochemistry first; an equivocal 2+ reflexes to in situ hybridization.</td></tr>
+              <tr><td><i>EGFR</i> mutation</td><td>Lung adenocarcinoma</td><td>An EGFR tyrosine-kinase inhibitor such as osimertinib (exon 19 deletion, L858R).</td></tr>
+              <tr><td><i>KRAS</i> mutation</td><td>Colon, lung, pancreas</td><td>In colorectal cancer, predicts no benefit from anti-EGFR antibodies. G12C is itself targetable.</td></tr>
+              <tr><td><i>BRAF</i> V600E</td><td>Melanoma, thyroid, colon</td><td>A BRAF inhibitor in combination: with a MEK inhibitor in melanoma and thyroid cancer, with an anti-EGFR antibody in colorectal cancer. In a colorectal cancer that has lost MLH1, it points to a sporadic tumor rather than Lynch syndrome.</td></tr>
+              <tr><td>Mismatch-repair loss (MSI-high)</td><td>Colon, endometrium, any site</td><td>Screens for Lynch syndrome and predicts response to immune checkpoint inhibitors.</td></tr>
+              <tr><td>High-risk HPV</td><td>Cervix, oropharynx</td><td>Drives cervical screening; HPV-associated oropharyngeal carcinoma has a better outlook.</td></tr>
+              <tr><td><i>BCR::ABL1</i></td><td>Chronic myeloid leukemia</td><td>Defines the disease, selects a tyrosine-kinase inhibitor such as imatinib, and its transcript level monitors response.</td></tr>
+              <tr><td><i>PML::RARA</i></td><td>Acute promyelocytic leukemia</td><td>A medical emergency. Start all-trans retinoic acid on suspicion; confirm quickly by FISH or RT-PCR.</td></tr>
+              <tr><td><i>JAK2</i> V617F</td><td>Polycythemia vera and related neoplasms</td><td>Confirms a clonal myeloproliferative neoplasm. If negative: <i>JAK2</i> exon 12 when polycythemia vera is suspected; <i>CALR</i> and <i>MPL</i> when essential thrombocythemia or myelofibrosis is suspected.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub reveal">Mismatch repair, stain by stain <span class="iftime">If time allows</span></h3>
+        <div class="reveal" id="lab-mmr" data-lab="mmr"></div>
+
+        <div class="know reveal" data-know="s7"></div>
+
+        <p class="check-title reveal">Checkpoint</p>
+        <div class="reveal" data-checkpoint="s7"></div>
+
+        <details class="deeper reveal">
+          <summary>Go deeper <small>on your own · monitoring leukemia, clonality, the full atlas</small></summary>
+          <div class="deeper-body">
+            <h3 class="sub">Following <i>BCR::ABL1</i> down <span class="lvl lvl--next">Next level</span></h3>
+            <div class="grid-2">
+              <figure class="fig" id="bcrFig"></figure>
+              <div class="stack">
+                <p class="note" style="margin-top:0"><span class="note-label">Clinical pattern</span>Transcript levels are reported on an <strong>International Scale</strong> so results compare between laboratories. Each ten-fold fall is one “log”. A <strong>major molecular response</strong> is 0.1% or less — a 3-log reduction.</p>
+                <p class="note note--next"><span class="note-label">What to do next</span>A confirmed rise in a patient who was responding prompts two questions: is the drug being taken, and has the kinase acquired a resistance mutation such as T315I?</p>
+              </div>
+            </div>
+            <p class="note"><span class="note-label">Clonality testing</span>Every lymphocyte rearranges its antigen-receptor genes differently. PCR of those genes gives a broad spread of sizes in a reactive process and a single dominant peak in a lymphoma. A clonal peak supports, but never by itself makes, a diagnosis of malignancy.</p>
+            <p style="margin-top:16px"><a class="btn btn--ghost btn--sm" href="#atlas">Open the biomarker atlas</a> <a class="btn btn--ghost btn--sm" href="#reference">Blood cancer reference table</a></p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ================= STOP 8 ================= -->
+      <section class="section" id="s8" data-title="Beyond cancer" data-min="7">
+        <header class="sec-head reveal">
+          <div class="sec-num">08</div>
+          <div>
+            <span class="kicker">Stop 8 · about 7 min · Objective 8</span>
+            <h2>Beyond cancer: inheritance, drug response and infection.</h2>
+            <p class="lead">The same tools answer three other everyday questions. Is this condition inherited? How will this patient handle this drug? What organism is this — and how much of it is there?</p>
+          </div>
+        </header>
+
+        <div class="grid-3 reveal">
+          <div class="card">
+            <span class="card-eyebrow">Inherited disease</span>
+            <h4>Know why you are testing.</h4>
+            <ul>
+              <li><strong>Diagnostic</strong> — a symptomatic patient (cystic fibrosis, fragile X).</li>
+              <li><strong>Predictive</strong> — a healthy relative (Huntington disease, <i>BRCA1/2</i>, Lynch syndrome).</li>
+              <li><strong>Carrier</strong> — before or during pregnancy (cystic fibrosis, sickle cell).</li>
+              <li><strong>Prenatal and newborn</strong> screening.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="card-eyebrow">Drug response</span>
+            <h4>Three enzymes to recognise.</h4>
+            <ul>
+              <li><strong>CYP2D6</strong> — codeine is a pro-drug. Poor metabolizers get little relief; ultra-rapid metabolizers risk toxicity.</li>
+              <li><strong>CYP2C19</strong> — activates clopidogrel. Poor metabolizers are under-protected.</li>
+              <li><strong>CYP2C9</strong> — clears warfarin. Slow variants need a lower dose.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <span class="card-eyebrow">Infection</span>
+            <h4>Four jobs.</h4>
+            <ul>
+              <li><strong>Detect</strong> — is it there? <i>C. difficile</i>, MRSA, respiratory viruses.</li>
+              <li><strong>Quantify</strong> — viral load in HIV, hepatitis B and C.</li>
+              <li><strong>Type</strong> — high-risk HPV genotypes.</li>
+              <li><strong>Resist</strong> — resistance genes and mutations: <i>mecA</i>, HIV genotype.</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="note note--pitfall reveal"><span class="note-label">Pitfall · detected is not the same as disease</span>A positive nucleic-acid test shows that nucleic acid is present — not that the organism is alive or responsible. Test the right patient (a formed stool should not be tested for <i>C. difficile</i>) and do not use PCR as an early test of cure.</p>
+
+        <div class="card card--tint reveal mt">
+          <h4>The human side</h4>
+          <p>A genetic result belongs to a family, not only to a patient. Predictive testing follows <strong>informed consent and counseling</strong>. Broad tests can turn up <strong>unexpected findings</strong>. In the United States, <strong>HIPAA</strong> protects the privacy of the result and <strong>GINA</strong> bars genetic discrimination in health insurance and employment — but <strong>not</strong> in life, disability or long-term-care insurance.</p>
+        </div>
+
+        <div class="know reveal" data-know="s8"></div>
+
+        <p class="check-title reveal">Checkpoint</p>
+        <div class="reveal" data-checkpoint="s8"></div>
+
+        <details class="deeper reveal">
+          <summary>Go deeper <small>on your own · repeat expansions, and where the reference tables live</small></summary>
+          <div class="deeper-body">
+            <div id="lab-repeat" data-lab="repeat"></div>
+            <p class="note"><span class="note-label">Clinical pattern · anticipation</span>Expanded repeats tend to grow when passed on, so the disease appears earlier and more severely in each generation. Large expansions are sized by PCR with fragment analysis, sometimes with Southern blotting — ordinary short-read sequencing handles them poorly.</p>
+            <p style="margin-top:16px"><a class="btn btn--ghost btn--sm" href="#reference">Open the reference tables</a></p>
+          </div>
+        </details>
+      </section>
+
+      <!-- ================= WRAP-UP ================= -->
+      <section class="section" id="wrap" data-title="Wrap-up" data-min="8">
+        <header class="sec-head reveal">
+          <div class="sec-num">09</div>
+          <div>
+            <span class="kicker">Wrap-up · about 8 min</span>
+            <h2>Two cases, then ten things to keep.</h2>
+            <p class="lead">Work these together. Decide what you would do before you open each answer.</p>
+          </div>
+        </header>
+
+        <div class="reveal" data-cases="wrap"></div>
+
+        <h3 class="sub reveal">Ten things to keep</h3>
+        <div class="recap mt">
+          <ol class="takehome reveal" data-takehome></ol>
+          <div class="stack">
+            <div class="card reveal">
+              <h4>Questions worth asking on service</h4>
+              <ul class="plain-list" data-ask></ul>
+            </div>
+            <div class="card card--tint reveal">
+              <h4>If you have ten more minutes</h4>
+              <p>Try the question bank filtered to the objective whose ring is emptiest, or open one case in the case lab. Everything below this point is optional.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card closing reveal mt-lg">
+          <p>You arrived knowing what cancer, infection and inheritance are. You leave able to ask the molecular laboratory the right question. Well done, Macallan &amp; Hussein.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#bank">Test yourself</a>
+            <a class="btn btn--ghost" href="#start">Back to the top</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ON YOUR OWN ================= -->
+      <div class="band" id="own">
+        <div class="band-in">
+          <span class="kicker">On your own</span>
+          <h2>Supplementary material.</h2>
+          <p>Nothing below is needed for the session. Open what you are curious about, in any order, whenever you like.</p>
+        </div>
+      </div>
+
+      <section class="section" id="cases" data-title="Case lab">
+        <header class="sec-head reveal">
+          <div class="sec-num">A</div>
+          <div>
+            <span class="kicker">On your own · practice</span>
+            <h2>Case lab.</h2>
+            <p class="lead">Six more cases, each revealed one decision at a time.</p>
+          </div>
+        </header>
+        <div class="reveal" data-cases="lab"></div>
+      </section>
+
+      <section class="section" id="bank" data-title="Question bank">
+        <header class="sec-head reveal">
+          <div class="sec-num">B</div>
+          <div>
+            <span class="kicker">On your own · self-test</span>
+            <h2>Question bank.</h2>
+            <p class="lead">Every question gives the answer, the reasoning, why the other options fail, and a pearl. Progress is saved on this device for whoever is selected under “Studying as”.</p>
+          </div>
+        </header>
+        <div class="quiz-bar reveal">
+          <div class="chips" id="bankFilters" role="group" aria-label="Filter questions by objective"></div>
+          <div class="score"><span>Correct <b id="scoreOk">0</b> of <b id="scoreDone">0</b></span><button class="btn btn--ghost btn--sm" id="resetBtn">Reset my progress</button></div>
+        </div>
+        <div id="bankList"></div>
+      </section>
+
+      <section class="section" id="atlas" data-title="Biomarker atlas">
+        <header class="sec-head reveal">
+          <div class="sec-num">C</div>
+          <div>
+            <span class="kicker">On your own · reference</span>
+            <h2>Biomarker atlas.</h2>
+            <p class="lead">Tumor, biomarker, and why anyone orders it. Filter by site or search by gene.</p>
+          </div>
+        </header>
+        <div class="atlas-bar reveal">
+          <div class="field"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="atlasSearch" type="search" placeholder="Search a gene or tumor — EGFR, melanoma, fusion…" aria-label="Search the biomarker atlas"></div>
+          <div class="chips" id="atlasFilters" role="group" aria-label="Filter by site"></div>
+        </div>
+        <div class="atlas" id="atlasGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="reference" data-title="Reference tables">
+        <header class="sec-head reveal">
+          <div class="sec-num">D</div>
+          <div>
+            <span class="kicker">On your own · reference</span>
+            <h2>Reference tables.</h2>
+            <p class="lead">The lists behind stops 7 and 8, for looking things up rather than reading through.</p>
+          </div>
+        </header>
+        <div class="reveal" id="refAcc"></div>
+      </section>
+
+      <section class="section" id="glossary" data-title="Glossary">
+        <header class="sec-head reveal">
+          <div class="sec-num">E</div>
+          <div>
+            <span class="kicker">On your own · reference</span>
+            <h2>Glossary.</h2>
+            <p class="lead">Plain-language definitions. Terms with a blue edge are the core vocabulary.</p>
+          </div>
+        </header>
+        <div class="field reveal"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="glossSearch" type="search" placeholder="Search a term — VAF, FISH, anticipation…" aria-label="Search the glossary"></div>
+        <div class="gloss" id="glossList" aria-live="polite"></div>
+      </section>
+
+      <footer class="foot">
+        <p><strong>Molecular Pathology · A Primer for the Pathology Rotation.</strong> Built for Macallan &amp; Hussein.</p>
+        <p>Objectives mapped from the American Board of Pathology content specifications. Educational synthesis for medical-student teaching; not a clinical protocol. Drug names are examples, not recommendations — verify against current guidelines and your laboratory’s own validated assays before acting on a patient.</p>
+        <p>Videos are embedded from their publishers’ channels: Cold Spring Harbor Laboratory DNA Learning Center, Illumina, and Emory University CancerQuest.</p>
+        <p class="foot-copy">&copy; 2026 <strong>Omar Z. Baba, MD</strong>. All rights reserved. The curriculum, written content, questions, cases, interactive labs, design system and source code of this primer are original work and may not be reproduced, redistributed or adapted without permission.</p>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<button class="to-top" id="toTop" aria-label="Back to top" hidden>↑</button>
+
+<dialog class="palette" id="palette" aria-label="Search the primer">
+  <div class="field"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input id="palInput" type="search" placeholder="Search stops, terms and biomarkers" aria-label="Search" autocomplete="off" role="combobox" aria-controls="palList" aria-expanded="true" aria-autocomplete="list"></div>
+  <ul class="pal-list" id="palList" role="listbox" aria-label="Results"></ul>
+  <p class="pal-status" id="palStatus" role="status"></p>
+  <div class="pal-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+</dialog>
+
+<script defer src="js/core.js?v=2026.11.17"></script>
+<script defer src="js/data/session.js?v=2026.11.17"></script>
+<script defer src="js/data/questions.js?v=2026.11.17"></script>
+<script defer src="js/data/cases.js?v=2026.11.17"></script>
+<script defer src="js/data/glossary.js?v=2026.11.17"></script>
+<script defer src="js/data/atlas.js?v=2026.11.17"></script>
+<script defer src="js/data/reference.js?v=2026.11.17"></script>
+<script defer src="js/data/tables.js?v=2026.11.17"></script>
+<script defer src="js/data/takeaways.js?v=2026.11.17"></script>
+<script defer src="js/widgets.js?v=2026.11.17"></script>
+<script defer src="js/practice.js?v=2026.11.17"></script>
+<script defer src="js/labs/mutation.js?v=2026.11.17"></script>
+<script defer src="js/labs/cellularity.js?v=2026.11.17"></script>
+<script defer src="js/labs/pcr.js?v=2026.11.17"></script>
+<script defer src="js/labs/qpcr.js?v=2026.11.17"></script>
+<script defer src="js/labs/pileup.js?v=2026.11.17"></script>
+<script defer src="js/labs/whichtest.js?v=2026.11.17"></script>
+<script defer src="js/labs/fish.js?v=2026.11.17"></script>
+<script defer src="js/labs/report.js?v=2026.11.17"></script>
+<script defer src="js/labs/mmr.js?v=2026.11.17"></script>
+<script defer src="js/labs/extras.js?v=2026.11.17"></script>
+<script defer src="js/app.js?v=2026.11.17"></script>
+<script type="module" src="js/labs/helix3d.js?v=2026.11.17"></script>
+</body>
+</html>
